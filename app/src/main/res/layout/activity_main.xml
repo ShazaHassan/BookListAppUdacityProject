@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/search_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search by title or author" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Search"
+            android:textAllCaps="false"
+            android:onClick="searchForBook"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/search_section"
+        android:layout_marginTop="8dp"
+        android:id="@+id/search_result"
+        android:dividerHeight="3dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/no_internet"
+        android:text="No Internet"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        android:text="No Result"
+        android:textAlignment="center"
+        android:id="@+id/no_result"/>
+
+</android.support.constraint.ConstraintLayout><!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent">-->
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:orientation="vertical">-->
+
+    <!--<LinearLayout--><!--android:id="@+id/searchSection"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginRight="@dimen/margin_8_dp"--><!--android:orientation="horizontal">-->
+
+    <!--<SearchView--><!--android:id="@+id/search_view_field"--><!--android:layout_width="0dp"--><!--android:layout_height="wrap_content"--><!--android:layout_weight="1"--><!--android:iconifiedByDefault="false"--><!--android:queryHint="@string/search_view_hint"--><!--tools:queryHint="@string/search_hint" />-->
+
+    <!--<Button--><!--android:id="@+id/search_button"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="@string/search_button_name" />--><!--</LinearLayout>-->
+
+    <!--<ListView--><!--android:id="@+id/list"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:divider="@null"--><!--android:dividerHeight="0dp"--><!--android:orientation="vertical" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--&lt;!&ndash; Empty view is only visible when the list has no items. &ndash;&gt;--><!--<TextView--><!--android:id="@+id/empty_view"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_centerInParent="true"--><!--android:textAppearance="?android:textAppearanceMedium" />-->
+
+    <!--<ProgressBar--><!--android:id="@+id/loading_spinner"--><!--style="?android:progressBarStyle"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_centerInParent="true" />-->
+
+
+    <!--</RelativeLayout>-->
